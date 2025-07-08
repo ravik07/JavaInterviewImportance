@@ -1,0 +1,146 @@
+✅ String-Based Java Coding Problems (25)
+=====================================
+Reverse a string without using StringBuilder
+
+Check if a string is a palindrome
+
+Remove duplicate characters from a string
+
+Find the first non-repeating character
+
+Count frequency of each character using HashMap
+
+Convert first letter of each word to uppercase
+
+Reverse the order of words in a sentence
+
+Check if two strings are anagrams
+
+Compress a string (aabbbcc → a2b3c2)
+
+Replace spaces in a string with %20
+
+Remove all non-alphabetic characters
+
+Toggle case of characters (aBc → AbC)
+
+Check if a string contains only digits
+
+Count total number of vowels and consonants
+
+Find all duplicate characters
+
+Convert string to integer (no parseInt)
+
+Check if two strings are rotations of each other
+
+Remove all characters in one string from another
+
+Find the most frequent character
+
+Find all substrings of a string
+
+Find length of the longest word in a sentence
+
+Reverse only vowels in a string
+
+Remove punctuation from a string
+
+Count number of words in a string
+
+Check if two strings are isomorphic
+===================================================
+
+✅ Array-Based Java Coding Problems (25)
+Reverse an array
+
+Remove duplicates using HashSet
+
+Find second largest number in array
+
+Sort array manually (no built-in sort)
+
+Count frequency of elements using HashMap
+
+Move all zeros to end
+
+Replace negative numbers with 0
+
+Find first non-repeating element
+
+Find common elements in two arrays
+
+Merge two arrays and remove duplicates
+
+Find missing number from 1 to n
+
+Rotate array by k positions
+
+Count even and odd elements
+
+Separate even and odd numbers
+
+Print all unique pairs with target sum
+
+Remove specific element from array
+
+Find duplicate elements
+
+Shift all negative numbers to left
+
+Find minimum and maximum in array
+
+Check if array is sorted
+
+Find product of array elements except self
+
+Reverse every k-size sub-array
+
+Find majority element (> n/2 times)
+
+Print elements that appear only once
+
+Count number of positive, negative, and zero elements
+=============================================
+✅ Number/Math-Based Java Coding Problems (10)
+Reverse a number
+
+Check if number is a palindrome
+
+Check if number is prime
+
+Print Fibonacci series up to n
+
+Find factorial of a number
+
+Check Armstrong number
+
+Count number of digits in a number
+
+Sum of digits of a number
+
+Check if number is even or odd (without %)
+
+Convert decimal to binary and vice versa
+==================================================
+✅ HashMap & HashSet-Based Java Coding Problems (10)
+Count word frequency in a sentence using HashMap
+
+Find duplicate elements in a list using HashSet
+
+Remove duplicates from a list using LinkedHashSet
+
+Find first non-repeated word using LinkedHashMap
+
+Get top 3 frequent elements using HashMap
+
+Merge two maps into one
+
+Sort a HashMap by values
+
+Convert List<String> to Set<String>
+
+Find intersection of two arrays using HashSet
+
+Convert Map<String, Integer> to a list of entries and sort by value
+====================================================
