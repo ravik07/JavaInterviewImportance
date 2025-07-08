@@ -1,0 +1,105 @@
+✅ Top 20 Most Asked Java Stream API Coding Problems
+🔹 1. Find the Second Highest Number in a List
+
+Optional<Integer> secondMax = list.stream()
+    .distinct()
+    .sorted(Comparator.reverseOrder())
+    .skip(1)
+    .findFirst();
+🔹 2. Count Frequency of Each Character in a String
+
+Map<Character, Long> freqMap = str.chars()
+    .mapToObj(c -> (char) c)
+    .collect(Collectors.groupingBy(c -> c, Collectors.counting()));
+🔹 3. Find Duplicate Elements in a List
+
+Set<String> duplicates = list.stream()
+    .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+    .entrySet().stream()
+    .filter(e -> e.getValue() > 1)
+    .map(Map.Entry::getKey)
+    .collect(Collectors.toSet());
+🔹 4. Group Employees by Department
+
+Map<String, List<Employee>> map = employees.stream()
+    .collect(Collectors.groupingBy(Employee::getDepartment));
+🔹 5. Sort List of Custom Objects by Multiple Fields
+
+list.stream()
+    .sorted(Comparator.comparing(Employee::getDept)
+        .thenComparing(Employee::getSalary))
+    .collect(Collectors.toList());
+🔹 6. Find First Non-Repeating Character in a String
+
+Optional<Character> ch = str.chars()
+    .mapToObj(c -> (char) c)
+    .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()))
+    .entrySet().stream()
+    .filter(e -> e.getValue() == 1)
+    .map(Map.Entry::getKey)
+    .findFirst();
+🔹 7. Convert List<String> to Uppercase
+
+List<String> result = list.stream()
+    .map(String::toUpperCase)
+    .collect(Collectors.toList());
+🔹 8. Sum and Average of Numbers
+
+int sum = list.stream().mapToInt(Integer::intValue).sum();
+double avg = list.stream().mapToInt(Integer::intValue).average().orElse(0.0);
+🔹 9. Flatten a List of Lists
+
+List<Integer> flat = listOfLists.stream()
+    .flatMap(List::stream)
+    .collect(Collectors.toList());
+🔹 10. Find Common Elements in Two Lists
+
+List<Integer> common = list1.stream()
+    .filter(list2::contains)
+    .collect(Collectors.toList());
+🔹 11. Remove Duplicates from a List
+
+List<Integer> unique = list.stream()
+    .distinct()
+    .collect(Collectors.toList());
+🔹 12. Convert Map to List of Keys/Values
+
+List<String> keys = map.keySet().stream().collect(Collectors.toList());
+List<Integer> values = map.values().stream().collect(Collectors.toList());
+🔹 13. Partition Numbers into Even and Odd
+
+Map<Boolean, List<Integer>> partitioned = list.stream()
+    .collect(Collectors.partitioningBy(n -> n % 2 == 0));
+🔹 14. Sort Map by Value
+
+LinkedHashMap<String, Integer> sorted = map.entrySet().stream()
+    .sorted(Map.Entry.comparingByValue())
+    .collect(Collectors.toMap(
+        Map.Entry::getKey, Map.Entry::getValue,
+        (a, b) -> a, LinkedHashMap::new));
+🔹 15. Count Word Frequency in a Sentence
+
+Map<String, Long> freq = Arrays.stream(sentence.split(" "))
+    .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+🔹 16. Get Max and Min from a List
+
+int max = list.stream().max(Integer::compareTo).orElseThrow();
+int min = list.stream().min(Integer::compareTo).orElseThrow();
+🔹 17. Filter and Collect Names Starting with "A"
+
+List<String> result = names.stream()
+    .filter(name -> name.startsWith("A"))
+    .collect(Collectors.toList());
+🔹 18. Join List of Strings with Comma
+
+String joined = list.stream()
+    .collect(Collectors.joining(", "));
+🔹 19. Count Elements Greater than Given Value
+
+long count = list.stream()
+    .filter(n -> n > 10)
+    .count();
+🔹 20. Find the Longest String in a List
+
+Optional<String> longest = list.stream()
+    .max(Comparator.comparing(String::length));
